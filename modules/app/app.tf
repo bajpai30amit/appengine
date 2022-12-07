@@ -44,6 +44,6 @@ resource "google_storage_bucket" "amit_bucket_q" {
 
 resource "google_storage_bucket_object" "object" {
   name   = "hello.zip"
-  bucket = google_storage_bucket.bucket.name
+  bucket = google_storage_bucket.amit_bucket_q.name
   source = "app/hello.zip"
 }
