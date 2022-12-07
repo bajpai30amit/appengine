@@ -36,7 +36,7 @@ resource "google_app_engine_standard_app_version" "hello" {
   noop_on_destroy = true
 }
 
-resource "google_storage_bucket" "bucket" {
+resource "google_storage_bucket" "amit_bucket_q" {
   project = var.project_id
   name = var.app_bucket_name
   location = var.region
