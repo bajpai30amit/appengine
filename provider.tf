@@ -7,7 +7,7 @@ provider "google" {
 # Where the state is stored
 terraform {
   backend "gcs" {
-    bucket = "test_amit_quick"
+    bucket = "qb-66degrees-tfstate"
     prefix = "terraform_new/state"
   }
 }

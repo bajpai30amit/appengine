@@ -1,6 +1,6 @@
 locals {
-  project-id = "shoptrue-gke"
-  region     = "us-central1"
-  location   = "us-central"
-  app_bucket_name = "test_amit_quick" 
+  project-id      = "qb-pipelines-66-degrees"
+  region          = "us-central1"
+  location        = "us-central"
+  app_bucket_name = "qb-66degrees-app"
 }
