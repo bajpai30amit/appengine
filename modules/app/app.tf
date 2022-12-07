@@ -10,7 +10,7 @@ resource "google_app_engine_standard_app_version" "hello" {
 
   deployment {
     zip {
-      source_url = "https://storage.googleapis.com/${google_storage_bucket.bucket1.name}/${google_storage_bucket_object.object.name}"
+      source_url = "https://storage.googleapis.com/${google_storage_bucket.bucket.name}/${google_storage_bucket_object.object.name}"
     }
   }
 
@@ -36,7 +36,7 @@ resource "google_app_engine_standard_app_version" "hello" {
   noop_on_destroy = true
 }
 
-resource "google_storage_bucket" "bucket1" {
+resource "google_storage_bucket" "bucket" {
   project = var.project_id
   name = var.app_bucket_name
   location = var.region
@@ -44,6 +44,6 @@ resource "google_storage_bucket" "bucket1" {
 
 resource "google_storage_bucket_object" "object" {
   name   = "hello.zip"
-  bucket = google_storage_bucket.bucket1.name
+  bucket = google_storage_bucket.bucket.name
   source = "app/hello.zip"
 }
